@@ -1,0 +1,17 @@
+﻿@model Color
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        @foreach (ProductColor product in Model.ProductColors)
+        {
+            <img src="~/assets/images/website-images/@product.Product.ProductImages.FirstOrDefault(p=>p.IsPrimary==true)?.Url" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@product.Product.Name</h5>
+                <p class="card-text">@product.Product.Description</p>
+            </div>
+            <div class="card-body">
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </div>
+        }
+    </div>
+</div>
