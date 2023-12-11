@@ -6,12 +6,12 @@ namespace ProniaAB104.Models
     public class Slide
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Title mutleq daxil edilmelidir")]
-        [MaxLength(25, ErrorMessage = "Title max uzunlugu: 25")]
+        [Required(ErrorMessage = "Title  daxil edilmelidir")]
+        [MaxLength(25, ErrorMessage = "Title  uzunlugu: 25")]
         public string Title { get; set; }
         public string SubTitle { get; set; }
-        [MinLength(15,ErrorMessage ="Description min uzunlugu: 15")]
-        [MaxLength(250, ErrorMessage = "Title max uzunlugu: 250")]
+        [MinLength(15,ErrorMessage ="Description min  uzunlugu: 20")]
+        [MaxLength(250, ErrorMessage = "Title max uzunlugu: 100")]
         public string Description { get; set; }
         public string Image { get; set; }
         public int Order { get; set; }

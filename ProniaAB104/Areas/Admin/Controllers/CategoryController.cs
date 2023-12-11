@@ -35,7 +35,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             bool result = _context.Categories.Any(c => c.Name.ToLower().Trim() == categoryVM.Name.ToLower().Trim());
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu Kateqoriya artiq movcuddur.");
+                ModelState.AddModelError("Name", "Bu category artiq movcuddur.");
                 return View();
             }
 
@@ -76,7 +76,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             bool result = _context.Categories.Any(c => c.Name == categoryVM.Name && c.Id != id);
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu adda category artiq movcuddur");
+                ModelState.AddModelError("Name", "Bu  category artiq movcuddur");
                 return View();
             }
             existed.Name = categoryVM.Name;

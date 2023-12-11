@@ -74,7 +74,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             bool result = _context.Sizes.Any(c => c.Name == sizeVM.Name && c.Id != id);
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu olcude artiq movcuddur");
+                ModelState.AddModelError("Name", "Bu olcuden artiq movcuddur");
                 return View();
             }
 

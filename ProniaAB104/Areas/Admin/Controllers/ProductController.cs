@@ -33,15 +33,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
         [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Create()
         {
-            //ViewBag olmadan
-
-            //CreateProductVM productVM = new CreateProductVM
-            //{
-            //    Categories = await _context.Categories.ToListAsync(),
-            //    Tags = await _context.Tags.ToListAsync(),
-            //    Colors = await _context.Colors.ToListAsync(),
-            //    Sizes = await _context.Sizes.ToListAsync()
-            //};
+      
 
             ViewBag.Categories = await _context.Categories.ToListAsync();
             ViewBag.Tags = await _context.Tags.ToListAsync();
@@ -374,12 +366,9 @@ namespace ProniaAB104.Areas.Admin.Controllers
                 });
             }
 
-            //TAG  Optimizasion (1) Yerindece silende istifade edirik
+           
 
-            //List<ProductTag> removeable = existed.ProductTags.Where(pt => !productVM.TagIds.Exists(tId => tId == pt.TagId)).ToList();
-            //_context.ProductTags.RemoveRange(removeable);
-
-            //TAG  Optimizasion (2) SaveChanges axirda edirikse istifade olunur.
+  
             List<ProductImage> removeable =existed.ProductImages.Where(pi=>!productVM.ImageIds.Exists(imgId=>imgId==pi.Id)&& pi.IsPrimary==null).ToList();
             foreach (ProductImage pImage in removeable)
             {
@@ -456,17 +445,10 @@ namespace ProniaAB104.Areas.Admin.Controllers
                 });
             }
 
-            //SIZE
+           
 
             existed.ProductSizes.RemoveAll(pt => !productVM.SizeIds.Exists(sId => sId == pt.SizeId));
 
-            //foreach (ProductSize pSize in existed.ProductSizes)
-            //{
-            //    if (!productVM.SizeIds.Exists(sId => sId == pSize.SizeId))
-            //    {
-            //        _context.ProductSizes.Remove(pSize);
-            //    }
-            //}
 
             List<int> sizeCreatable = productVM.SizeIds.Where(sId => !existed.ProductSizes.Exists(ps => ps.SizeId == sId)).ToList();
 

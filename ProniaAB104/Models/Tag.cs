@@ -6,8 +6,8 @@ namespace ProniaAB104.Models
     {
 
         public int Id { get; set; }
-        [Required(ErrorMessage = "Ad mutleq daxil edilmelidir!")]
-        [MaxLength(10, ErrorMessage = "Uzunlugu 10 xarakterden cox olmamalidir.")]
+        [Required(ErrorMessage = "Ad  daxil edilmelidir!")]
+        [MaxLength(10, ErrorMessage = "Uzunlugu 15 xarakterden cox olmamalidir.")]
         public string Name { get; set; }
         public List<ProductTag>? ProductTags { get; set; }
     }

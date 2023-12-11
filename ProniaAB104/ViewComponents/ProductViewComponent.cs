@@ -34,7 +34,7 @@ namespace ProniaAB104.ViewComponents
             }
             return View(products);
 
-            //return View(await Task.FromResult(products);
+      
         }
     }
 }

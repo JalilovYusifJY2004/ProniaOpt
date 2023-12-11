@@ -159,7 +159,7 @@ namespace ProniaAB104.Controllers
                 Response.Cookies.Append("Basket", json);
             }
 
-            //return Redirect(Request.Headers["Referer"]);
+        
 
             return RedirectToAction(nameof(Index), "Home");
         }
@@ -333,7 +333,7 @@ namespace ProniaAB104.Controllers
             body += @"  </tbody>
                      </table>";
 
-            await _emailService.SendMailAsync(user.Email, "Your Order", body, true);
+            await _emailService.SendMailAsync(user.Email, " Order", body, true);
 
             return RedirectToAction("Index", "Home");
         }
