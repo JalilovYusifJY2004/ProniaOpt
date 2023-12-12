@@ -24,6 +24,8 @@ namespace ProniaAB104.Controllers
         }
         public async Task<IActionResult> Index()
         {
+
+            throw new Exception("Basketde xeta yarandi");
             List<BasketItemVM> basketVM = new List<BasketItemVM>();
 
             if (User.Identity.IsAuthenticated)
