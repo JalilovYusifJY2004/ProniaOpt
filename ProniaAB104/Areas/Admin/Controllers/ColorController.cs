@@ -18,13 +18,13 @@ namespace ProniaAB104.Areas.Admin.Controllers
         {
             _context = context;
         }
-        [Authorize(Roles = "Admin,Moderator")]
+        //[Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Index()
         {
             var colors = await _context.Colors.Include(c => c.ProductColors).ToListAsync();
             return View(colors);
         }
-        [Authorize(Roles = "Admin,Moderator")]
+        //[Authorize(Roles = "Admin,Moderator")]
         public IActionResult Create()
         {
             return View();
@@ -51,7 +51,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        [Authorize(Roles = "Admin,Moderator")]
+        //[Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Update(int id)
         {
             if (id <= 0) return BadRequest();
@@ -84,7 +84,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();

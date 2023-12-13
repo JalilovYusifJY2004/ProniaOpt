@@ -32,7 +32,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             {
                 TotalPage = Math.Ceiling(count / 3),
                 CurrentPage = page,
-                Items =Products
+                Items =products
             };
 
             return View(paginationated);
@@ -234,7 +234,7 @@ namespace ProniaAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        [Authorize(Roles = "Admin,Moderator")]
+        [authorize(roles = "admin,moderator")]
         public async Task<IActionResult> Update(int id)
         {
             if (id <= 0) return BadRequest();

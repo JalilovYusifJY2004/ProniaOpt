@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zeynal\\Desktop\\ProniaOptimize\\ProniaAB104\\ProniaAB104.csproj": {}
+    "C:\\Users\\ca.r214.15\\Desktop\\ProniaOpt\\ProniaAB104\\ProniaAB104.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zeynal\\Desktop\\ProniaOptimize\\ProniaAB104\\ProniaAB104.csproj": {
+    "C:\\Users\\ca.r214.15\\Desktop\\ProniaOpt\\ProniaAB104\\ProniaAB104.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zeynal\\Desktop\\ProniaOptimize\\ProniaAB104\\ProniaAB104.csproj",
+        "projectUniqueName": "C:\\Users\\ca.r214.15\\Desktop\\ProniaOpt\\ProniaAB104\\ProniaAB104.csproj",
         "projectName": "ProniaAB104",
-        "projectPath": "C:\\Users\\Zeynal\\Desktop\\ProniaOptimize\\ProniaAB104\\ProniaAB104.csproj",
-        "packagesPath": "C:\\Users\\Zeynal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zeynal\\Desktop\\ProniaOptimize\\ProniaAB104\\obj\\",
+        "projectPath": "C:\\Users\\ca.r214.15\\Desktop\\ProniaOpt\\ProniaAB104\\ProniaAB104.csproj",
+        "packagesPath": "C:\\Users\\ca.r214.15\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ca.r214.15\\Desktop\\ProniaOpt\\ProniaAB104\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zeynal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ca.r214.15\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
